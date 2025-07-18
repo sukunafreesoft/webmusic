@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Музыкальный Плеер</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="visualizer"></canvas>
+
+  <h1>🎧 Fergasy</h1>
+  <h4>© No Copyright Music</h4>
+
+  <div class="main-content">
+    <!-- Список треков -->
+    <div class="track-list">
+      <div class="track" data-index="0"><strong>Rock Instrumental</strong>
+        <audio>
+          <source src="music/Rock_Instrumental_v1.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="track" data-index="1"><strong>Rock Instrumental 1</strong>
+        <audio>
+          <source src="music/Rock_Instrumental_v2.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="track" data-index="2"><strong>Bassline Breakdown</strong>
+        <audio>
+          <source src="music/Bassline_Breakdown.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="track" data-index="3"><strong>Bassline Breakdown Instrumental</strong>
+        <audio>
+          <source src="music/bassline_breakdown_instrumental.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="track" data-index="4"><strong>Ded Maksim Rock Version</strong>
+        <audio>
+          <source src="music/ded_maksim_rock.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="track" data-index="5"><strong>Jsi jak slunce</strong>
+        <audio>
+          <source src="music/jsi_jak_slunce.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="track" data-index="6"><strong>Standoff 2 Song</strong>
+        <audio>
+          <source src="music/Standoff2_song.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="track" data-index="7"><strong>Ти як сонце</strong>
+        <audio>
+          <source src="music/ty_jak_sonce.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="track" data-index="8"><strong>Ded Maksim Rap v1</strong>
+        <audio>
+          <source src="music/ded_maksim_rapv1.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="track" data-index="9"><strong>Ded Maksim Rap v2</strong>
+        <audio>
+          <source src="music/ded_maksim_rapv2.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="track" data-index="10"><strong>Techno Hard v1</strong>
+        <audio>
+          <source src="music/Techno_Hard_1.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="track" data-index="11"><strong>Techno Hard v2</strong>
+        <audio>
+          <source src="music/Techno_Hard_2.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <!-- Панель управления -->
+  <div class="player-panel">
+    <div class="player-bar">
+      <button id="prev" class="control-btn"><img src="icons/prev.png" alt="prev" /></button>
+      <button id="play-pause" class="control-btn"><img src="icons/play.png" alt="play/pause" /></button>
+      <button id="next" class="control-btn"><img src="icons/next.png" alt="next" /></button>
+      <span id="track-title">—</span>
+    </div>
+
+    <div class="progress-container">
+      <span id="current-time">0:00</span>
+      <input type="range" id="progress-bar" min="0" value="0" step="1" />
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="volume-container">
+      <label for="volume">🔊</label>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+    </div>
+
+    <button id="download-track" title="Скачать текущий трек">
+      <img src="icons/download.png" alt="download" />
+      <span class="download-text">Download this track</span>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
